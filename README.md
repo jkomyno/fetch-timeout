@@ -10,6 +10,12 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
 ## Installation
 
   `npm install --save fetch-timeout`
+  
+### Nodejs environment only
+
+Also add the following package, since the standard window.fetch isn't accessible from node.
+
+`npm install --save node-fetch`
 
 ## Usage
 

@@ -7,7 +7,7 @@ var should = chai.should();
 
 var fetchTimeout = require('../src');
 
-describe("fetchTimeout should receive a 200 status'd response, and an object with a string message property", function() {
+describe("fetchTimeout should receive a 200 status'd response, and an object containing at least the property authorizations_url, which is a string", function() {
 	it("it should have a 'message' property whose type is string", function(done) {
 
         fetchTimeout('https://api.github.com/', {

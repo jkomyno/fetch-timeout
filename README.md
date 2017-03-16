@@ -1,5 +1,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/jkomyno/fetch-timeout/badge.svg?branch=master)](https://coveralls.io/github/jkomyno/fetch-timeout?branch=master)
-https://travis-ci.org/jkomyno/fetch-timeout.svg?branch=master
 [![Build Status](https://travis-ci.org/jkomyno/fetch-timeout.svg?branch=master)](https://travis-ci.org/jkomyno/fetch-timeout)
 
 fetch-timeout

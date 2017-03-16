@@ -26,14 +26,14 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
     },
   }, 5000, 'My custom timeout error string')
   .then(function(res) {
-  	if (res.status !== 200) {
-  		throw new Error('Status code not OK', res.status);
-  	} else {
-  		return res.json();
-  	}
+    if (res.status !== 200) {
+      throw new Error('Status code not OK', res.status);
+    } else {
+      return res.json();
+    }
   })
   .then(function(json) {
-  	console.log("json returned from response");
+    console.log("json returned from response");
   })
   .catch(function(err) {
       console.log("error", err);
@@ -43,7 +43,7 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
 #### ES6
 
 ```javascript
-	import fetchTimeout from 'fetch-timeout';
+  import fetchTimeout from 'fetch-timeout';
 
   fetchTimeout('https://api.github.com/', {
     method: 'GET',
@@ -53,14 +53,14 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
     },
   }, 5000, 'My custom timeout error string')
   .then(res => {
-  	if (res.status !== 200) {
-  		throw new Error('Status code not OK', res.status);
-  	} else {
-  		return res.json();
-  	}
+    if (res.status !== 200) {
+      throw new Error('Status code not OK', res.status);
+    } else {
+      return res.json();
+    }
   })
   .then(json => {
-  	console.log("json returned from response");
+    console.log("json returned from response");
   })
   .catch(err => {
       console.log("error", err);
@@ -70,15 +70,17 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
 ## API
 
 
-Arguments | Type   | Optional | Default     		| Description
-----------| ------ | -------- | ---------------	| ------------------------------------------------------------
-url  			| string | false 		| 				  			| url to pass to node-fetch
-options 	| object | true  		| {}  						| standard options to pass to node-fetch
-timeout  	| number | true  		| 10000 					| maximum acceptable timeout before throwing the timeout error
-error 		| string | true  		| 'Timeout error' | custom error string after the timeout is expired
+Arguments | Type   | Optional | Default           | Description
+----------| ------ | -------- | ----------------- | ------------------------------------------------------------
+url       | string | false    |                   | url to pass to node-fetch
+options   | object | true     | {}                | standard options to pass to node-fetch
+timeout   | number | true     | 10000             | maximum acceptable timeout before throwing the timeout error
+error     | string | true     | 'Timeout error'   | custom error string after the timeout is expired
 
 ## Tests
 
   `npm test`
 
 ## Contributing
+
+Pull requests and suggestions are more than welcome!

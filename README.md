@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/jkomyno/fetch-timeout/badge.svg?branch=master)](https://coveralls.io/github/jkomyno/fetch-timeout?branch=master)
+[![npm version](https://badge.fury.io/js/fetch-timeout.svg)](https://badge.fury.io/js/fetch-timeout)
 [![Build Status](https://travis-ci.org/jkomyno/fetch-timeout.svg?branch=master)](https://travis-ci.org/jkomyno/fetch-timeout)
 
 fetch-timeout
@@ -9,7 +9,7 @@ If used in NodeJS, this package is dependent on node-fetch, altough it will alwa
 
 ## Installation
 
-  `npm install fetch-timeout`
+  `npm install --save fetch-timeout`
 
 ## Usage
 

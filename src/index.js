@@ -1,7 +1,11 @@
-'use strict';
+
+
+let fetchPromise;
 
 if (typeof window === 'undefined' || window.hasOwnProperty('fetch')) {
-  var fetch = require('node-fetch');
+  fetchPromise = require('node-fetch'); // eslint-disable-line global-require
+} else {
+  fetchPromise = fetch;
 }
 
 /**
@@ -12,8 +16,8 @@ if (typeof window === 'undefined' || window.hasOwnProperty('fetch')) {
  * @return
  */
 function timeoutPromise(promise, timeout, error) {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
       reject(error);
     }, timeout);
     promise.then(resolve, reject);
@@ -21,7 +25,8 @@ function timeoutPromise(promise, timeout, error) {
 }
 
 /**
- * node-fetch wrapper that adds the possibility to set a timeout after which a custom error is returned.
+ * node-fetch wrapper that adds the possibility to set a timeout after which
+ * a custom error is returned.
  * @param  {string} url     url to pass to node-fetch
  * @param  {object} options options to pass to node-fetch
  * @param  {number} timeout maximum acceptable timeout before considering the request as failed
@@ -32,5 +37,5 @@ module.exports = function fetchTimeout(url, options, timeout, error) {
   error = error || 'Timeout error';
   options = options || {};
   timeout = timeout || 10000;
-  return timeoutPromise(fetch(url, options), timeout, error);
+  return timeoutPromise(fetchPromise(url, options), timeout, error);
 };

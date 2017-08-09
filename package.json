@@ -1,6 +1,6 @@
 {
   "name": "fetch-timeout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTTP/S fetch wrapper that adds the possibility to set a timeout after which a custom error is returned.",
   "main": "src/index.js",
   "scripts": {

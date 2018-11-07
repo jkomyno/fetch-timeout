@@ -2,7 +2,7 @@
 
 let fetchPromise;
 
-if (typeof window === 'undefined' || window.hasOwnProperty('fetch')) {
+if (typeof window === 'undefined' || !window.hasOwnProperty('fetch')) {
   fetchPromise = require('node-fetch'); // eslint-disable-line global-require
 } else {
   fetchPromise = fetch;
